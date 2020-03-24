@@ -33,12 +33,22 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="map"></div>
     <script>
-      var map = L.map('map').setView([0,0], 0);
+
+      var map = L.map('map').setView([0, 0], 2);
       //https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
-      //         tileSize: 128
+
       L.tileLayer('tiles/{z}-{x}-{y}.jpg', {
         maxZoom: 5,
+        tileSize: 128
       }).addTo(map);
+
+      L.marker([78, 55], {title: 'Castle'}).addTo(map);
+
+
+      const coordinates = [[74, -161], [36, -172], [45, -130], [72, -106]];
+      L.polygon(coordinates, { color: 'red' }).addTo(map);
+
+
     </script>
   </body>
 </html>
