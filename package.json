@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.6.1",
+    "canvas": "^2.10.1",
     "image-clipper": "^0.4.4"
   }
 }
